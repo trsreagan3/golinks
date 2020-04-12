@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reagan's Dumb Link Service</title>
+	</head>
+	<body>
+		<form action="/" method="post">
+			<label for="shortcut">Shortcut:</label>
+			<input type="text" id="shortcut" name="shortcut" size="25">
+			<label for="destination">Destination:</label>
+			<input type="url" id="destination" name="destination" size="150">
+			<input type="submit" value="Create">
+		</form>
+		{{range $k,$v:=.}}
+			<li><strong>{{$k}} : </strong><a href="{{$v}}">{{$v}}</a></li>
+		{{end}} 
+	</body>
+</html>
